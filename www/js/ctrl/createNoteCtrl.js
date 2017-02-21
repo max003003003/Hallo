@@ -23,7 +23,7 @@ angular.module('moduleControlles')
     });
   };
 
-
+/*sadasd*/
 ionic.Platform.ready(function(){
    
 $scope.scheduleEveryMinuteNotification = function () {
