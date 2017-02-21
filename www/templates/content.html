@@ -1,0 +1,83 @@
+
+<ion-view>
+  
+   <ion-nav-bar class="grdient-blue">
+
+	<ion-nav-buttons side="left">
+      <button style="color:white" class="button button-icon icon ion-navicon" ng-click="toggleLeft()">
+      </button>
+    </ion-nav-buttons>
+
+	<ion-nav-title>
+		<i style="font-weight:250">HOME</i>
+    </ion-nav-title>
+  </ion-nav-bar>
+
+ <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light bar-gradientGreen">
+    <div class="tabs">
+      <a ng-model="activeToday" ng-click="switchContentToday()" class="tab-item {{activeToday}}">
+       
+        TODAY 
+      </a>
+      <a ng-model="activeAll" ng-click="switchContentAll()" class="tab-item {{activeAll}}">
+     
+        ALL
+      </a>
+     
+    </div>
+  </div>
+
+<ion-side-menus>
+
+  <ion-side-menu side="left">
+        <ion-content class="has-header has-tabs-top">
+            <ul style="color:black" class="list">   
+              <a ng-click="SIGNOUT()" class="item" menu-close>LOGOUT</a>
+            </ul>
+          </ion-content>
+  </ion-side-menu>
+
+  <ion-side-menu-content>
+     
+ <ion-content style="background:#F3F3F3" class="has-header has-tabs-top padding has-footer" >
+   <br>
+   
+      <div ng-show="today" ng-repeat="note in listNote track by $index"  class="cardStyle">
+         
+       <div class="numberStyle">{{$index+1}}</div>
+       
+        <div ng-click="goToDetailNote($index);"class="textStyle-{{note.c}}">
+          {{note.n}}
+
+
+        </div>
+      </div>
+
+  
+
+
+
+  <div ng-show="All" ng-repeat="note in listNote track by $index "  class="cardStyle">
+         
+       <div class="numberStyle">{{$index+1}}</div>
+       
+        <div ng-click="goToDetailNote($index);"class="textStyle-{{note.c}}">
+          {{note.n}}
+        </div>
+      </div>
+   
+ 
+
+</ion-content>
+<ion-footer-bar style="background:#F3F3F3" align-title="right">
+<div class="btn-add" ng-click="goTOCreateNote()">+</div>
+</ion-footer-bar>
+  </ion-side-menu-content>
+
+
+
+</ion-side-menus>
+
+
+</ion-view>
+

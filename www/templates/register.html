@@ -1,0 +1,52 @@
+         <ion-view>
+        <ion-nav-bar class="grdient-blue-regis">
+
+	<ion-nav-buttons side="left">
+      <button style="color:white" class="button button-icon icon ion-chevron-left" ng-click="back()">
+
+      </button>
+    </ion-nav-buttons>
+
+	<ion-nav-title>
+		<center><i style="font-weight:250">SIGN UP</i></center>
+    </ion-nav-title>
+
+<ion-nav-buttons side="right">
+      <button style="color:transparent" class="button button-icon icon" ng-click="done()">
+          DONE
+      </button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  
+
+       <ion-content >
+           <div class="wrapperRegis">
+            <div class="regisForm">
+                
+                <div class="row">
+                <div class="col col-100">
+                   <div class="regis-topic"> NEW ACCOUNT</div>
+                   
+                    <input   ng-model="regis.EMAIL" style="margin-top:15%;" class="form-Login" type="text" placeholder="EMAIL">
+                    <input   ng-model="regis.PASSWORD"  class="form-Login" type="password" placeholder="PASSWORD">
+
+                           <center> OR</center>
+                    <div class="regis-signInGoogle"><img style="width:100%;height:100%" src="img/gLogo.png" ></img></div>
+                    <div class="regis-signIn"><button style="border-style:none" ng-click="signUp()" class="formRegis-sumbit" type="submit" ><i class="form-login-font">SIGN UP</i></button></div>
+     
+                
+                </div>
+               
+                </div>
+              
+            </div>
+           
+  
+
+</div>
+
+           
+               
+       </ion-content>
+    </ion-view>

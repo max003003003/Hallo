@@ -1,0 +1,62 @@
+ 
+ <ion-view>
+ 
+        <ion-nav-bar class="grdient-blue">
+
+	<ion-nav-buttons side="left">
+      <button style="color:white" class="button button-icon icon ion-chevron-left" ng-click="back()">
+
+      </button>
+    </ion-nav-buttons>
+
+	<ion-nav-title>
+		<center><i style="font-weight:250">NOTE</i></center>
+    </ion-nav-title>
+
+<ion-nav-buttons side="right">
+      <button style="color:white" class="button button-icon icon" ng-click="done()">
+          DONE
+      </button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+
+
+
+       <ion-content style="background:#F3F3F3">
+       
+          
+            <div style="background:#329FC6" class="detailTopicStyle-card1"></div>
+        
+            <textarea  ng-model="createNote.detail" class="detailStyle-card" style="color:black;padding: 10%;"></textarea>
+
+            </div>
+
+
+
+            </div>
+           
+        
+<!--
+     <div class="detailStyle-card" ng-hide="swichContent" style="color:black;padding: 10%;" data-ng-bind-html="suggestGoogleMapBind"></div>
+        <div id="caretPos" class="detailNote-textArea"></div>
+
+-->
+         <div class="btn-googleMap"><img style="width:100%;height:100%" src="img/googleMap.png"></img></div>
+         <div class="tapColor">
+             
+            <div ng-model="activeColor1" ng-click="changeColor1()" class="tapColor-color1 {{activeColor1}}"></div>
+            <div ng-model="activeColor2" ng-click="changeColor2()" class="tapColor-color2 {{activeColor2}}"></div>
+            <div ng-model="activeColor3" ng-click="changeColor3()" class="tapColor-color3 {{activeColor3}}"></div> 
+         
+          
+               
+         </div>
+
+          <div ng-show="false" style="width:500px;height:500px;" id="map3"></div>
+         
+
+
+
+       </ion-content>
+    </ion-view>

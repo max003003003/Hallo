@@ -1,0 +1,73 @@
+
+<ion-view>
+  
+   <ion-nav-bar class="grdient-blue">
+
+	<ion-nav-buttons side="left">
+      <button style="color:white" class="button button-icon icon ion-navicon" ng-click="toggleLeft()">
+      </button>
+    </ion-nav-buttons>
+
+	<ion-nav-title>
+		<i style="font-weight:250">HOME</i>
+    </ion-nav-title>
+  </ion-nav-bar>
+
+ <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light bar-gradientGreen">
+    <div class="tabs">
+      <a class="tab-item active">
+       
+        TODAY
+      </a>
+      <a ng-click="" class="tab-item ">
+     
+        ALL
+      </a>
+     
+    </div>
+  </div>
+
+<ion-side-menus>
+
+  <ion-side-menu side="left">
+        <ion-content class="has-header has-tabs-top">
+            <ul style="color:black" class="list">   
+              <a ng-click="SIGNOUT()" class="item" menu-close>LOGOUT</a>
+            </ul>
+          </ion-content>
+  </ion-side-menu>
+
+  <ion-side-menu-content>
+     
+ <ion-content style="background:#F3F3F3" class="has-header has-tabs-top padding" >
+   <br>
+      <div ng-repeat="note in listNote track by $index"  class="cardStyle">
+         
+       <div class="numberStyle">{{note.seq}}</div>
+       
+        <div ng-click="goToDetailNote(note.seq);"class="textStyle-card1">
+          {{note.detail}}
+
+
+        </div>
+      </div>
+</div>
+    
+<div class="btn-add" ng-click="goTOCreateNote()">+</div>
+
+
+
+   
+ 
+
+</ion-content>
+
+  </ion-side-menu-content>
+
+
+
+</ion-side-menus>
+
+
+</ion-view>
+
